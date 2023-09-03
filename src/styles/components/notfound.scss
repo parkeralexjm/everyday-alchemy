@@ -1,0 +1,5 @@
+.notfound {
+  @include flex-align-center(column);
+  justify-content: center;
+  height: 80vh;
+}

@@ -1,0 +1,9 @@
+// ! Colors
+$teal: #0F6767;
+$lightteal: rgb(209, 230, 230);
+
+@mixin flex-align-center($direction: column) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+}

@@ -1,0 +1,18 @@
+@import 'variables', 'base';
+@import './components/home','./components/search','./components/single', './components/drinks.scss', './components/notfound.scss', './components/button.scss';
+/* The following line can be included in a src/App.scss */
+@import '~bootstrap/scss/bootstrap';
+
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'Trochut', cursive;
+}
+
+.limelight {
+  font-family: 'Limelight', cursive;
+}
+
+.trochut {
+  font-family: 'Trochut', cursive;
+}

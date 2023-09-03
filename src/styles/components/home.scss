@@ -1,0 +1,8 @@
+.home {
+  height: 80vh;
+  @include flex-align-center(column);
+  justify-content: space-evenly;
+  h1 {
+    font-size: 5vw;
+  }
+}
