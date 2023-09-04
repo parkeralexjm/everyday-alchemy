@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Col, Row, Container, Image, Spinner, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+import CustomSpinner from './CustomSpinner'
 
 function Single() {
   const [drink, setDrink] = useState({})
@@ -78,7 +79,7 @@ function Single() {
             </Row>
           </Container>
           :
-          <Spinner />
+          <CustomSpinner />
       }
     </>
   )

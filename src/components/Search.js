@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Spinner } from 'react-bootstrap'
 import Drinks from './Drinks'
 import SpiritSearch from './SpiritSearch'
-
+import CustomSpinner from './CustomSpinner'
 import SpiritSelect from './SpiritSelect'
 
 function Search() {
@@ -58,7 +58,7 @@ function Search() {
       {filteredDrinks.length > 0 ?
         <Drinks drinksList={filteredDrinks}/>
         :
-        <Spinner />
+        <CustomSpinner />
       }
     </>
   )

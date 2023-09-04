@@ -2,6 +2,7 @@ import { Card, Col, Container, Row, Spinner, Button, Image } from 'react-bootstr
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Pagination } from 'react-bootstrap'
+import CustomSpinner from './CustomSpinner'
 
 export default function Drinks({ drinksList }) {
   const limit = 8
@@ -76,7 +77,7 @@ export default function Drinks({ drinksList }) {
             }
           </>
           :
-          <Spinner />
+          <CustomSpinner />
       }
     </section>
   )
