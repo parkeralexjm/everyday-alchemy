@@ -22,8 +22,8 @@ function Home() {
   ]
 
   return (
-    <div className='home px-5'>
-      <h1 className='limelight text-center'>{quotes[Math.floor(Math.random() * quotes.length)]}</h1>
+    <div className='home'>
+      <h1 className='limelight text-center px-2 py-4'>{quotes[Math.floor(Math.random() * quotes.length)]}</h1>
       <div>
         <Button className='custom-btn' as={Link} to={'/search'} size='lg'>Cocktail List</Button>
       </div>  

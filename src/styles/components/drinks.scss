@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.card-img {
+  filter: brightness(80%);
+}
+
 .card-img-overlay {
   padding: 0 !important;
   display: flex;
@@ -17,6 +21,10 @@
   padding: 1vw;
   background-color: rgba($teal, 0.6);
   text-shadow: 2px 2px 1px rgba(143, 85, 20, 1);
+}
+
+.card {
+  box-shadow: 3px 6px 5px rgba(#000000, 0.4);
 }
 
 .drink-col-item{

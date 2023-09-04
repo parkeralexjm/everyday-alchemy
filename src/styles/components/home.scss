@@ -2,7 +2,17 @@
   height: 80vh;
   @include flex-align-center(column);
   justify-content: space-evenly;
+  margin: 1.5vw;
   h1 {
     font-size: 5vw;
+    background-color: rgba(rgb(255, 255, 255), 0.5);
+    border: thick double $dark-teal;
+    box-shadow: 3px 6px 5px rgba(#000000, 0.4);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home {
+    margin: 5vw;
   }
 }

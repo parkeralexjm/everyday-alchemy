@@ -12,6 +12,7 @@ function Search() {
     'Bourbon',
     'Brandy',
     'Gin',
+    'Non-Alcoholic',
     'Rum',
     'Tequila',
     'Vodka',
@@ -26,8 +27,13 @@ function Search() {
     async function getDrinksBySpirit() {
       try {
         if (spirit) {
-          const { data: { drinks } } = await axios.get(`/filter.php?i=${spirit}`)
-          setDrinksList(drinks)
+          if (spirit !== 'Non-Alcoholic') {
+            const { data: { drinks } } = await axios.get(`/filter.php?i=${spirit}`)
+            setDrinksList(drinks)
+          } else {
+            const { data: { drinks } } = await axios.get('/filter.php?a=Non_Alcoholic')
+            setDrinksList(drinks)
+          }
         } else {
           const { data: { drinks } } = await axios.get('/filter.php?c=cocktail') // Load all cocktails if there was no spirit selected c=Cocktail
           setDrinksList(drinks)
