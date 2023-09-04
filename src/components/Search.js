@@ -63,10 +63,13 @@ function Search() {
         <SpiritSelect setSpirit={setSpirit} spiritList={spiritList} />
         <SpiritSearch setSearchValue={setSearchValue} searchValue={searchValue}/>
       </div>
-      {filteredDrinks.length > 0 ?
+      {drinksList.length > 0 ?
         <Drinks drinksList={filteredDrinks}/>
         :
-        <CustomSpinner />
+        filteredDrinks.length > 0 ?
+          <h3>No drinks found</h3>
+          :
+          <CustomSpinner />
       }
     </>
   )

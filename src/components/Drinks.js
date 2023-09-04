@@ -79,7 +79,7 @@ export default function Drinks({ drinksList }) {
             }
           </>
           :
-          <CustomSpinner />
+          <h3>No drinks found</h3>
       }
     </section>
   )
