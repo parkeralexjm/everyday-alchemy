@@ -3,8 +3,33 @@ $teal: #0F6767;
 $dark-teal: #073131;
 $lightteal: rgb(209, 230, 230);
 
+// ! Variable overrides
+$primary:  #0F6767;
+$theme-colors: (
+  "primary": #0F6767,
+  "danger": #ff4136
+  );
+
 @mixin flex-align-center($direction: column) {
   display: flex;
   flex-direction: $direction;
   align-items: center;
+}
+
+@mixin size-hover-transition {
+  transition: transform 0.3s !important;
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+@mixin fancy-border {
+  border: thick double $dark-teal !important;
+  box-shadow: 3px 6px 5px rgba(#000000, 0.4) !important;
+}
+
+@mixin background-center {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

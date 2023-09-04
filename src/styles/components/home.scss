@@ -1,13 +1,14 @@
 .home {
-  height: 80vh;
   @include flex-align-center(column);
   justify-content: space-evenly;
-  margin: 1.5vw;
+  margin: 3vw;
   h1 {
-    font-size: 5vw;
+    font-size: 4vw;
     background-color: rgba(rgb(255, 255, 255), 0.5);
     border: thick double $dark-teal;
     box-shadow: 3px 6px 5px rgba(#000000, 0.4);
+    margin-bottom: 5vw;
+    padding: 2vw;
   }
 }
 

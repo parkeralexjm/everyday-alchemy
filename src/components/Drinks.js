@@ -1,7 +1,15 @@
-import { Card, Col, Container, Row, Spinner, Button, Image } from 'react-bootstrap'
+//! Bootstrap imports
+import Card from 'react-bootstrap/Card'
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Pagination from 'react-bootstrap/Pagination'
+
+// ! React imports
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { Pagination } from 'react-bootstrap'
+
+// ! Custom Component imports
 import CustomSpinner from './CustomSpinner'
 
 export default function Drinks({ drinksList }) {
@@ -11,7 +19,6 @@ export default function Drinks({ drinksList }) {
   const [active, setActive] = useState(1)
 
   // ! Pagination
-  // eslint-disable-next-line prefer-const
   const items = []
   for (let number = 1; number <= Math.ceil(drinksList.length / 8); number++) {
     items.push(
@@ -28,10 +35,6 @@ export default function Drinks({ drinksList }) {
     setActive(number)
   }
 
-  function drinkRoute() {
-
-  }
-
   useEffect(() => {
     if (drinksList) {
       setActive(1)
@@ -44,7 +47,6 @@ export default function Drinks({ drinksList }) {
       return index >= count && index < (count + limit)
     })
     setPageData(eightDrinks)
-    console.log(eightDrinks)
   }, [drinksList, count])
 
   return (
@@ -52,7 +54,7 @@ export default function Drinks({ drinksList }) {
       {
         drinksList.length > 0 ?
           <>
-            <Pagination className='mt-3' size={(Math.ceil(drinksList.length / 8) > 8 && 'sm')} >{items}</Pagination>
+            <Pagination className='mt-3' size={(Math.ceil(drinksList.length / 8) > 7 && 'sm')} >{items}</Pagination>
             <Container fluid>
               <Row>
                 {
@@ -73,7 +75,7 @@ export default function Drinks({ drinksList }) {
               </Row>
             </Container>
             { window.innerWidth < 576 &&
-              <Pagination className='mt-3' size={(Math.ceil(drinksList.length / 8) > 8 && 'sm')} >{items}</Pagination>
+              <Pagination className='mt-3' size={(Math.ceil(drinksList.length / 8) > 7 && 'sm')} >{items}</Pagination>
             }
           </>
           :

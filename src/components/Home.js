@@ -1,8 +1,10 @@
-// Bootstrap imports
-import { Link } from 'react-router-dom'
-import { Button } from 'react-bootstrap'
+//!  Bootstrap imports
+import Button from 'react-bootstrap/Button'
 
-function Home() {
+// ! React imports
+import { Link } from 'react-router-dom'
+
+export default function Home() {
   const quotes = [
     'I have mixed drinks about feelings',
     'Hydrate responsibly',
@@ -23,12 +25,10 @@ function Home() {
 
   return (
     <div className='home'>
-      <h1 className='limelight text-center px-2 py-4'>{quotes[Math.floor(Math.random() * quotes.length)]}</h1>
+      <h1 className='limelight text-center'>{quotes[Math.floor(Math.random() * quotes.length)]}</h1>
       <div>
-        <Button className='custom-btn' as={Link} to={'/search'} size='lg'>Cocktail List</Button>
+        <Button className='custom-btn' as={Link} to={'/search'} size={window.innerWidth > 768 ? 'lg' : 'sm'}>Cocktail List</Button>
       </div>  
     </div>
   )
 }
-
-export default Home

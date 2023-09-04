@@ -1,7 +1,4 @@
-import { useState } from 'react'
-import Form from 'react-bootstrap/Form'
-
-function SpiritSearch({ searchValue, setSearchValue }) {
+export default function SpiritSearch({ searchValue, setSearchValue }) {
 
   function handleChange(e) {
     setSearchValue(e.target.value)
@@ -11,5 +8,3 @@ function SpiritSearch({ searchValue, setSearchValue }) {
     <input type='text' placeholder='Search by name' value={searchValue} onChange={handleChange}></input>
   )
 }
-
-export default SpiritSearch

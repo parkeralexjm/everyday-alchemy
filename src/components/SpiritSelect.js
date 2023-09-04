@@ -1,6 +1,7 @@
+// ! Bootstrap imports
 import Form from 'react-bootstrap/Form'
 
-function SpiritSelect({ setSpirit, spiritList }) {
+export default function SpiritSelect({ setSpirit, spiritList }) {
   function handleChange(e) {
     setSpirit(e.target.value)
   }
@@ -16,5 +17,3 @@ function SpiritSelect({ setSpirit, spiritList }) {
     </Form.Select>
   )
 }
-
-export default SpiritSelect

@@ -1,8 +1,15 @@
+//! Bootstrap imports
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Button from 'react-bootstrap/Button'
+
+// ! React imports
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Col, Row, Container, Image, Spinner, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+
+// ! Custom Component imports
 import CustomSpinner from './CustomSpinner'
 
 function Single() {
@@ -14,8 +21,7 @@ function Single() {
   useEffect(() => {
     async function getDrinkData() {
       try {
-        const { data } = await axios.get(`/lookup.php?i=${drinkId}`)
-        console.log(data)
+        const { data } = await axios.get(`/api/json/v1/1/lookup.php?i=${drinkId}`)
         const { drinks: [{ 
           idDrink, 
           strDrink, 
@@ -56,8 +62,8 @@ function Single() {
               <Col md='6'>
                 <div className='drink-content'>
                   <h1 className='text-center'>{drink.strDrink}</h1>
-                  <h3 className='text-left'>Instructions</h3>
-                  <p className='text-center'>{drink.strInstructions}</p>
+                  <h3 className='text-left font-weight-bold'>Instructions</h3>
+                  <p className='text-center mb-4'>{drink.strInstructions}</p>
                   <Button className='custom-btn' as={Link} to='/search'>Back to search</Button>
                 </div>
               </Col>

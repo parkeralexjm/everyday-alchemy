@@ -8,35 +8,32 @@ html {
   height: 100%;
   background-image: 
   linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url('../images/background.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include background-center;
   background-attachment: fixed;
 }
 
 #root {
-  @include flex-align-center();
+  @include flex-align-center(column);
   justify-content: center;
   margin: 5vh 0;
   width: 80vw;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  @include flex-align-center(column);
   background-color: rgba(#e9e9e9ad, 0.6);
+  max-width: 1200px;
 }
 
 // ! Breakpoints
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 576px) {
   #root {
     margin-top: 10vh;
   }
   
   main {
     min-height: 47vh;
-    min-width: 80vw;
+    width: 80vw;
   }
 }

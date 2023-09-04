@@ -1,5 +1,5 @@
 .btn{
   border-radius: 0px !important;
-  border: thick double $dark-teal !important;
-  box-shadow: 3px 6px 5px rgba(#000000, 0.4) !important;
+  @include fancy-border;
+  @include size-hover-transition;
 }

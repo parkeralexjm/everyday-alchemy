@@ -1,7 +1,5 @@
 .filter-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-align-center(column);
   justify-content: space-around;
   input {
     margin-top: 1rem;
@@ -14,12 +12,13 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 768px) {
   .filter-wrapper {
     flex-direction: row;
     align-items: unset;
   input {
     margin-top: 0;
+    margin-left: 17vw;
   }
 }
 }

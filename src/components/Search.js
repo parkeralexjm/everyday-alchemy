@@ -1,6 +1,8 @@
+// ! React imports
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { Spinner } from 'react-bootstrap'
+
+// ! Custom Component imports
 import Drinks from './Drinks'
 import SpiritSearch from './SpiritSearch'
 import CustomSpinner from './CustomSpinner'
@@ -28,14 +30,14 @@ function Search() {
       try {
         if (spirit) {
           if (spirit !== 'Non-Alcoholic') {
-            const { data: { drinks } } = await axios.get(`/filter.php?i=${spirit}`)
+            const { data: { drinks } } = await axios.get(`/api/json/v1/1/filter.php?i=${spirit}`)
             setDrinksList(drinks)
           } else {
-            const { data: { drinks } } = await axios.get('/filter.php?a=Non_Alcoholic')
+            const { data: { drinks } } = await axios.get('/api/json/v1/1/filter.php?a=Non_Alcoholic')
             setDrinksList(drinks)
           }
         } else {
-          const { data: { drinks } } = await axios.get('/filter.php?c=cocktail') // Load all cocktails if there was no spirit selected c=Cocktail
+          const { data: { drinks } } = await axios.get('/api/json/v1/1/filter.php?c=cocktail') // Load all cocktails if there was no spirit selected c=Cocktail
           setDrinksList(drinks)
         }
       } catch (error) {
@@ -57,7 +59,7 @@ function Search() {
 
   return (
     <>
-      <div className='filter-wrapper my-2'>
+      <div className='filter-wrapper my-1'>
         <SpiritSelect setSpirit={setSpirit} spiritList={spiritList} />
         <SpiritSearch setSearchValue={setSearchValue} searchValue={searchValue}/>
       </div>

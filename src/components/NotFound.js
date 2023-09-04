@@ -1,8 +1,11 @@
+//! Bootstrap imports
+import Button from 'react-bootstrap/Button'
+
+// ! React imports
 import React from 'react'
-import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-function NotFound() {
+export default function NotFound() {
   return (
     <div className='notfound'>
       <h1 className='limelight'>These are not the spirits you&apos;re looking for</h1>
@@ -10,5 +13,3 @@ function NotFound() {
     </div>
   )
 }
-
-export default NotFound

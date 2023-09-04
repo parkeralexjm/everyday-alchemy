@@ -1,18 +1,13 @@
 @import 'variables', 'base';
-@import './components/home','./components/search','./components/single', './components/drinks.scss', './components/notfound.scss', './components/button.scss';
-/* The following line can be included in a src/App.scss */
+@import './components/home',
+'./components/search',
+'./components/single', 
+'./components/drinks.scss', 
+'./components/notfound.scss', 
+'./components/button.scss';
 
-// Your variable overrides
-$primary:  #0F6767;
-$theme-colors: (
-  "primary": #0F6767,
-  "danger": #ff4136
-  );
-  
-  // $lightteal: rgb(209, 230, 230);
-  
-  // Bootstrap and its default variables
-  @import '~bootstrap/scss/bootstrap';
+
+@import '~bootstrap/scss/bootstrap';
 @import "node_modules/bootstrap/scss/bootstrap";
 
 * {
