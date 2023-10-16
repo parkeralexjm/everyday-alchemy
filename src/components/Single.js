@@ -23,10 +23,6 @@ function Single() {
       try {
         const { data } = await axios.get(`/api/json/v1/1/lookup.php?i=${drinkId}`)
         const { drinks: [{ 
-          idDrink, 
-          strDrink, 
-          strGlass, 
-          strInstructions, 
           strIngredient1, 
           strIngredient2, 
           strIngredient3, 
@@ -35,7 +31,6 @@ function Single() {
           strMeasure2, 
           strMeasure3, 
           strMeasure4,
-          strImageSource, 
         }] } = data
         setDrink(data.drinks[0])
         setIngredients([

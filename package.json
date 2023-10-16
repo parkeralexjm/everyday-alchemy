@@ -12,7 +12,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",
     "react-scripts": "^5.0.1",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "use-debounce": "^9.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,5 +37,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://www.thecocktaildb.com/api/json/v1/1/"
+  "proxy": "https://www.thecocktaildb.com/api/"
 }

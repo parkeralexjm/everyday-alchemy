@@ -1,5 +1,4 @@
 export default function SpiritSearch({ searchValue, setSearchValue }) {
-
   function handleChange(e) {
     setSearchValue(e.target.value)
   }

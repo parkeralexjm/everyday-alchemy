@@ -1,23 +1,83 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) GA London React Template
+# Everyday Alchemy
 
-## Update the Proxy Server
+Everyday Alchemy is a cocktail recipe database allowing users to search for their favourite cocktails and filter by spirit to find new ones.
 
-By default, the proxy server is set up to point at port 8000, if you need to do so update in `setupProxy.js` where commented.
+## Link to the game
 
-## Using NPM
+[Live link to project](https://everyday-alchemy.netlify.app/)
 
-`npm run start` or `npm run dev`  to run the development server
+## Overview and Concept
 
-`npm run build` to create a build directory
+I was given two days to complete a react-based app using javascript, HTML and CSS. My project is built using react and styled using bootstrap and SASS.
 
-## Using Yarn
+### React
 
-`yarn start` or `yarn dev`  to run the development server
+I used react to create the framework for the app including react-router-dom to direct the user between the different pages
 
-`yarn build` to create a build directory
+### Bootstrap
 
-### ⚠️
+I used pagination, buttons, links etc to style the different parts of the app.
 
-To prevent the `failed-to-compile` issue for linter errors like `no-unsed-vars`, rename the `.env.example` to `.env` and restart your development server. Note this will only change the behaviour of certain linter errors to now be warnings, and is added just to allow your code to compile in development. These errors should still be fixed and other errors will still result in the code being unable to compile
+### SASS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I used SASS files to organise my CSS styling including the use of variables and mixins.
+
+## Approach taken
+
+## Planning
+
+### Home Page
+
+![Home wireframe](./readme_images/plan-home.PNG)
+
+### Search page
+
+![Search wireframe](./readme_images/plan-search.PNG)
+
+### Single page
+
+![Single wireframe](./readme_images/plan-single.PNG)
+
+## API testing
+
+![Postman](./readme_images/postman.PNG)
+![Multiple Drink Query](./readme_images/drink-list.PNG)
+![Single Drink Query](./readme_images/single-drink-response.PNG)
+
+## App walkthrough
+
+### Home page
+
+![Home page](./readme_images/final-splash.PNG)
+
+### Search page
+
+![Search page](./readme_images/final-search.PNG)
+
+### Single page
+
+![Single page](./readme_images/final-single.PNG)
+
+## Key Lessons
+
+- Strong theming for the pages
+- Destructuring the data from the api and creating an array to display the ingredients.
+
+
+## Challenges
+
+- Some images from the API are pretty bad quality
+- Some instructions/ingredients are not rendered fully by the api
+- API is restricted to maximum 100 items but querying for *all* cocktails is over 100. (prefiltered)
+
+
+## Future improvements
+
+- Add debouncing from the search input to smooth out the search options being made.
+
+- Resize the app on mobile to prevent the whole background being loaded when only one entry is loaded.
+
+- Add placeholder images so that the height does not change rapidly
+
+- Collapse pagination on small mobiles to prevent resizing of the window
+
