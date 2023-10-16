@@ -1,69 +1,83 @@
-# Gourmet Gossip
+# Everyday Alchemy
 
-## Description
+Everyday Alchemy is a cocktail recipe database allowing users to search for their favourite cocktails and filter by spirit to find new ones.
 
-Gourmet Gossip is a recipe sharing website where users can create, edit and delete recipes and leave reviews for recipes that they enjoy.
+## Link to the game
 
-[Nadjaob](https://github.com/nadjaob), [jchesher92](https://github.com/jchesher92) and I were given 7 days to complete our project as a group. We initially researched and created a wireframe on [figma](https://www.figma.com/file/qrek2uENdq7sUzyKiliVPP/Project-3?type=design&node-id=0%3A1&mode=design&t=yuz0fOXCGQmQYVJc-1). We then divided tasks up using trello to identify which features we would work on. James would focus on back-end, Nadja on front-end and I would float between picking up features as needed.
+[Live link to project](https://everyday-alchemy.netlify.app/)
 
-## Deployment Link
+## Overview and Concept
 
-[Live deployment here](https://gourmet-gossip-665d7e750e14.herokuapp.com/)
+I was given two days to complete a react-based app using javascript, HTML and CSS. My project is built using react and styled using bootstrap and SASS.
 
-## Project Brief
+### React
 
-- Build a full-stack application by making your own backend and your own front-end
-- Use an Express API to serve your data from a Mongo database
-- Consume your API with a separate front-end built with React
-- Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models
-- Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut
-- Have a visually impressive design to kick your portfolio up a notch and have something to wow future clients & employers. ALLOW time for this.
-- Be deployed online so it's publicly accessible.
+I used react to create the framework for the app including react-router-dom to direct the user between the different pages
 
-## Code Process
+### Bootstrap
 
-### Day 1
+I used pagination, buttons, links etc to style the different parts of the app.
 
-Research, wireframing, trello board
+### SASS
 
-### Day 2
+I used SASS files to organise my CSS styling including the use of variables and mixins.
 
-Create models, initially seed database, help controllers
+## Approach taken
 
-### Day 3
+## Planning
 
-Create basic login and register pages, apply simple styling and added authentication routes to prevent multiple users with the same username or email address. Validate both passwords are the same and store as a hash using bcrypt.
+### Home Page
 
-### Day 4
+![Home wireframe](./readme_images/plan-home.PNG)
 
-Create profile page for users, add ‘addedby’ field to display the recipes that each individual user has created. Add a redirect if the user is not logged in. 
+### Search page
 
-### Day 5
+![Search wireframe](./readme_images/plan-search.PNG)
 
-Top rated feature, include virtual field on the model to calculate the average ratings of each recipe’s reviews. Displayed as a carousel on the homepage
+### Single page
 
-### Day 6
+![Single wireframe](./readme_images/plan-single.PNG)
 
-Assist James with favourites page
+## API testing
 
-### Day 7
+![Postman](./readme_images/postman.PNG)
+![Multiple Drink Query](./readme_images/drink-list.PNG)
+![Single Drink Query](./readme_images/single-drink-response.PNG)
 
-Final styling and editing changes
-Added new fonts to titles
-Restyled login and register pages to display a message and fixed the padding/margins for mobile
-Restructured seed to include vegan recipes
-Removed all console.logs and forms that were causing browser errors (duplicate id’s)
-Added the diet button as an overlay for the recipe card page to gain more space for the description.
-Renamed intermediate to medium in order to prevent line breaks on recipe cards
+## App walkthrough
+
+### Home page
+
+![Home page](./readme_images/final-splash.PNG)
+
+### Search page
+
+![Search page](./readme_images/final-search.PNG)
+
+### Single page
+
+![Single page](./readme_images/final-single.PNG)
+
+## Key Lessons
+
+- Strong theming for the pages
+- Destructuring the data from the api and creating an array to display the ingredients.
+
 
 ## Challenges
 
-## Future Improvements
+- Some images from the API are pretty bad quality
+- Some instructions/ingredients are not rendered fully by the api
+- API is restricted to maximum 100 items but querying for *all* cocktails is over 100. (prefiltered)
 
-- Allow users to change their password/username/email
 
-- Add a top contributor page with the user that has the highest ratings
+## Future improvements
 
-- Add a diet choice for users to sort by preferences
+- Add debouncing from the search input to smooth out the search options being made.
 
-- Add a shopping list function for users to add ingredients to their list for later.
+- Resize the app on mobile to prevent the whole background being loaded when only one entry is loaded.
+
+- Add placeholder images so that the height does not change rapidly
+
+- Collapse pagination on small mobiles to prevent resizing of the window
+
